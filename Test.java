@@ -1,4 +1,6 @@
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
  class Student {
 
@@ -22,7 +24,7 @@ import java.util.*;
 
 
 public class Test {
-    public static void main(String args[]) throws IOException {
+    public static void main(String args[]) throws IOException, ParseException {
 //        Student s1=new Student(1,"Ayushi","ayukumari@gmail.com","21/07/1987","CSE",new int[]{95,96,87,56,23});
 //        Student s2=new Student(2,"Neha","neha@gmail.com","30/09/1999","CSE",new int[]{96,87,67,89,54});
         Scanner sc = new Scanner(System.in);
@@ -36,9 +38,18 @@ public class Test {
             String dob = sc.next();
             String branch = sc.next();
             int marks[] = new int[5];
+            int avg=0;
             for (int j = 0; j < 5; j++) {
-                marks[i] = sc.nextInt();
+                marks[j] = sc.nextInt();
+                avg+=marks[j];
+
             }
+            List<Integer> l=new ArrayList<>();
+            for(int k=0;k<marks.length;k++)
+            {
+                System.out.println(l.add(marks[i]));
+            }
+            System.out.println(avg/5);
             s[i] = new Student(id, name, email, dob, branch, marks);
             System.out.println(s[i].id);
 
@@ -57,6 +68,12 @@ public class Test {
 
             }
             if(s[i].name.startsWith("P"))
+            {
+                System.out.println(s[i].id + " " + s[i].name);
+
+            }
+            Date d1=new SimpleDateFormat("dd/MM/yyyy").parse(s[i].dob);
+            if(s[i].email.contains("gmail.com"))
             {
                 System.out.println(s[i].id + " " + s[i].name);
 
