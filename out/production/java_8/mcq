@@ -1,0 +1,165 @@
+MCQ:
+1. Which of the following is not introduced with Java 8?
+a) Stream API
+b) Serialization
+c) Spliterator
+d) Lambda Expression
+Ans: Serialization
+
+2. What is the purpose of BooleanSupplier function interface?
+a) represents supplier of Boolean-valued results
+b) returns Boolean-valued result
+c) There is no such function interface
+d) returns null if Boolean is passed as argument
+Ans:represents supplier of Boolean-valued results
+
+3. What is the return type of lambda expression?
+a) String
+b) Object
+c) void
+d) Function
+Ans:Function
+
+4. Which is the new method introduced in java 8 to iterate over a collection?
+a) for (String i : StringList)
+b) foreach (String i : StringList)
+c) StringList.forEach()
+d) List.for()
+Ans:StringList.forEach()
+
+5. What are the two types of Streams offered by java 8?
+a) sequential and parallel
+b) sequential and random
+c) parallel and random
+d) random and synchronized
+Ans:sequential and parallel
+
+6. Which feature of java 8 enables us to create a work stealing thread pool using all available processors at its target?
+a) workPool
+b) newWorkStealingPool
+c) threadPool
+d) workThreadPool
+Ans:newWorkStealingPool
+
+7. What does Files.lines(Path path) do?
+a) It reads all the files at the path specified as a String
+b) It reads all the lines from a file as a Stream
+c) It reads the filenames at the path specified
+d) It counts the number of lines for files at the path specified
+Ans:It reads all the lines from a file as a Stream
+
+8. What is Optional object used for?
+a) Optional is used for optional runtime argument
+b) Optional is used for optional spring profile
+c) Optional is used to represent null with absent value
+d) Optional means it’s not mandatory for method to return object
+Ans:Optional is used to represent null with absent value
+
+9. What is the substitute of Rhino javascript engine in Java 8?
+a) Nashorn
+b) V8
+c) Inscript
+d) Narcissus
+Ans:Nashorn
+
+10. What does SAM stand for in the context of Functional Interface?
+a) Single Ambivalue Method
+b) Single Abstract Method
+c) Simple Active Markup
+d) Simple Abstract Markup
+Ans:Single Abstract Method
+
+
+11. Which of the following are valid lambda expressions?
+    a. String a, String b -> System.out.print(a+ b);
+    b. () -> return;
+    c. (int i) -> i;
+    d. (int i) -> i++; return i;
+Ans:    c. (int i) -> i;
+12. Given below code snippet
+interface A {
+     int aMethod(String s);
+}
+13. Which of the following are valid statements?
+    a. A a = a -> a.length();
+    b. A x = y -> {return y;};
+    c. A s = "2" -> Integer.parseInt(s);
+    d. A b = (String s) -> 1;
+Ans:A b = (String s) -> 1;
+14. A lambda expression can be used...
+    a. As a method argument
+    b. As a conditional expression in an if statement
+    c. In a return statement
+    d. In a throw statement
+Ans:a and c
+15. Which of the following are functional interfaces? (Select ALL that apply)
+    a. java.util.stream.Stream
+    b. java.util.function.Consumer
+    c. java.util.function.Supplier
+    d. java.util.function.Predicate
+    e. java.util.function.Function
+Ans:b,c,d,e
+16. Choose the correct option based on this program:
+import java.util.function.BiFunction;
+public class StringCompare {
+    public static void main(String args[]) {
+        BiFunction < String, String, Boolean > compareString = (x, y) - >
+            x.equals(y);
+        System.out.println(compareString.apply("Java8", "Java8"));
+    }
+}
+        a. This program results in a compiler error in the line marked with #1
+        b. This program prints: true
+        c. This program prints: false
+        d. This program prints: (x, y) -> x.equals(y)
+        e. This program prints: ("Java8", "Java8") -> "Java8".equals("Java8")
+Ans:        b. This program prints: true
+17. Which one of the following abstract methods does not take any argument but returns a value?
+        a. The accept() method in java.util.function.Consumer interface
+        b. The get() method in java.util.function.Supplier interface
+        c. The test() method in java.util.function.Predicate interface
+        d. The apply() method in java.util.function.Function interface
+Ans:        b. The get() method in java.util.function.Supplier interface
+18. Which of the following interfaces of the Java API can be considered functional?
+    a. java.util.concurrent.Callable
+    b. java.util.Map
+    c. java.util.Iterator
+    d. java.lang.Comparable
+Ans:a and d
+19. Which of the following are intermediate operations?
+    a. limit
+    b. peek
+    c. anyMatch
+    d. skip
+Ans:a,b,d
+20. Which of the following are terminal operations?
+    a. sorted
+    b. flatMap
+    c. max
+    d. Distinct
+Ans:c
+21. Which of the following are short-circuit operations?
+        a. reduce
+    b. parallel
+    c. findNone
+    d. findFirst
+Ans:d
+22. Which of the following are valid ways to create a LocalDate object?
+    a. LocalDate.of(2014);
+    b. LocalDate.with(2014, 1, 30);
+    c. LocalDate.of(2014, 0, 30);
+    d. LocalDate.now().plusDays(5);
+Ans:d
+23. Which of the following are valid ChronoUnit values for LocalTime?
+        a. YEAR
+    b. NANOS
+    c. DAY
+    d. HALF_DAYS
+Ans:b and d
+24. Which one of the following classes is best suited for storing timestamp values of application events in a file?
+        a. java.time.ZoneId class
+        b. java.time.ZoneOffset class
+        c. java.time.Instant class
+        d. java.time.Duration class
+        e. java.time.Period class
+Ans:c. java.time.Instant class
